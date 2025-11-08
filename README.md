@@ -36,10 +36,6 @@ npm run build
 
 This creates a production build in `dist/` and generates the service worker and manifest assets.
 
-### GitHub Pages Deployment
-
-The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically installs dependencies, builds the production bundle, and publishes the contents of `dist/` to GitHub Pages whenever changes land on `main`. Ensure Pages is configured to use the **GitHub Actions** source so deployments run without needing to commit build artifacts manually.
-
 ## Import / Export Formats
 
 - **Roster CSV:** `first_name,last_name,grad_year,group`
