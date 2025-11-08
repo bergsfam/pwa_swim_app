@@ -3,12 +3,11 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: '/pwa_swim_app/',
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icons/icon.svg'],
+      includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
         name: 'Granville Swim Tracker',
         short_name: 'Swim Tracker',
@@ -19,10 +18,14 @@ export default defineConfig({
         orientation: 'portrait-primary',
         icons: [
           {
-            src: 'icons/icon.svg',
-            sizes: 'any',
-            type: 'image/svg+xml',
-            purpose: 'any maskable'
+            src: 'icons/pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'icons/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
           }
         ]
       }
